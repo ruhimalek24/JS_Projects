@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<style>
+    .data {
+        text-align: center;
+    }
+
+    #input,
+    #add {
+        font-size: 20px;
+        padding: 10px;
+
+    }
+
+    .clear-btn {
+        display: block;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .clear {
+        font-size: 16px;
+        padding: 8px;
+
+    }
+
+    #add {
+        margin-left: 15px;
+    }
+
+    #list {
+        display: block;
+    }
+
+    .items {
+        margin-top: 7%;
+    }
+
+    .dynamic-div {
+        display: flex;
+        justify-content: center;
+        font-size: 26px;
+
+    }
+
+    .dynamic-btn {
+        gap: 10%;
+        cursor: pointer;
+    }
+
+    .head {
+        text-align: center;
+        font-size: 46px;
+        color: steelblue;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p class="head">To-do List</p>
+        <div class="items">
+            <div class="data">
+                <input id="input" placeholder="Enter your task">
+                <button id="add">Add</button>
+            </div>
+        </div>
+        <div id="list">
+
+        </div>
+        <div class="clear-btn" id="clear-btn">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

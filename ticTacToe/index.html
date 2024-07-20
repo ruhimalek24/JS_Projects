@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .head {
+        font-size: 50px;
+        color: steelblue;
+        text-align: center;
+    }
+
+    #msg {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: brown;
+    }
+
+    .grid {
+        width: 400px;
+        justify-content: center;
+        display: block;
+        margin-top: 10%;
+        margin-left: 40%;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .col {
+        height: 90px;
+        width: 90px;
+        border: 0;
+        /* Remove all borders initially */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 33px;
+        cursor: pointer;
+    }
+
+    /* Add borders to the inner cells only */
+    .row:nth-child(1) .col {
+        border-bottom: 2px solid black;
+        /* Bottom border for the first row */
+    }
+
+    .row:nth-child(2) .col {
+        border-top: 2px solid black;
+        /* Top border for the second row */
+        border-bottom: 2px solid black;
+        /* Bottom border for the second row */
+    }
+
+    .row:nth-child(3) .col {
+        border-top: 2px solid black;
+        /* Top border for the third row */
+    }
+
+    .row .col:nth-child(1) {
+        border-right: 2px solid black;
+        /* Right border for the first column */
+    }
+
+    .row .col:nth-child(2) {
+        border-left: 2px solid black;
+        /* Left border for the second column */
+        border-right: 2px solid black;
+        /* Right border for the second column */
+    }
+
+    .row .col:nth-child(3) {
+        border-left: 2px solid black;
+        /* Left border for the third column */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p class="head">Tic tac toe</p>
+        <div class="grid">
+            <div class="row">
+                <div onclick="handleClick(this)" id="0" class="col"></div>
+                <div onclick="handleClick(this)" id="1" class="col"></div>
+                <div onclick="handleClick(this)" id="2" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="3" class="col"></div>
+                <div onclick="handleClick(this)" id="4" class="col"></div>
+                <div onclick="handleClick(this)" id="5" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="6" class="col"></div>
+                <div onclick="handleClick(this)" id="7" class="col"></div>
+                <div onclick="handleClick(this)" id="8" class="col"></div>
+            </div>
+        </div>
+        <p id="msg"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
